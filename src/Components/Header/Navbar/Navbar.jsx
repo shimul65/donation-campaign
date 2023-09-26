@@ -4,13 +4,13 @@ import logo from '../../../assets/logo.png'
 
 const Navbar = () => {
     return (
-        <nav className="container mx-auto border border-red-500 px-28 relative z-50 ">
-            <div className="navbar bg-transparent">
+        <nav className="container mx-auto px-2 md:px-12 lg:px-28 relative z-50 ">
+            <div className="navbar bg-transparent flex gap-5">
                 <div className="flex-1">
                     <img src={logo} alt="" />
                 </div>
                 <div className="flex-none">
-                    <ul className=" flex gap-10 px-1">
+                    <ul className=" flex gap-3 md:gap-6 lg:gap-10 px-1">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/donation'>Donation</NavLink></li>
                         <li><NavLink to='/statistics'>Statistics</NavLink></li>

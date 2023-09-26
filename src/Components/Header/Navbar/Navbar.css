@@ -1,6 +1,4 @@
 nav a.active {
     text-decoration: underline;
     color: red;
-    padding: 5px 10px;
-    border-radius: 8px;
 }
