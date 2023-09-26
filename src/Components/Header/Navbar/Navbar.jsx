@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.css'
 import logo from '../../../assets/logo.png'
+import { HiBars3BottomRight } from "react-icons/hi2";
 
 const Navbar = () => {
     return (
@@ -9,8 +10,17 @@ const Navbar = () => {
                 <div className="flex-1">
                     <img src={logo} alt="" />
                 </div>
-                <div className="flex-none">
+                <div className="flex-none hidden md:block">
                     <ul className=" flex gap-3 md:gap-6 lg:gap-10 px-1">
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/donation'>Donation</NavLink></li>
+                        <li><NavLink to='/statistics'>Statistics</NavLink></li>
+                    </ul>
+                </div>
+
+                <div className="dropdown dropdown-end md:hidden">
+                    <label tabIndex={0} className="btn text-2xl m-1"><HiBars3BottomRight></HiBars3BottomRight></label>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/donation'>Donation</NavLink></li>
                         <li><NavLink to='/statistics'>Statistics</NavLink></li>
