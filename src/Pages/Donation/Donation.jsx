@@ -12,8 +12,6 @@ const Donation = () => {
         setSelectedCategories(selectedCategory);
     }, [])
 
-    console.log(selectedCategories);
-
     return (
         <div>
             {selectedCategories === null ?
@@ -31,7 +29,7 @@ const Donation = () => {
                 </div>
                 :
                 <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-10 md:my-16 lg:my-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 p-4 lg:p-0 container mx-auto my-10 md:my-16 lg:my-20">
                         {
                             selectedCategories?.slice(0, dataLength).map(selectedCategory => <SelectCategory key={selectedCategory.id} selectedCategory={selectedCategory}></SelectCategory>)
                         }

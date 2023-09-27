@@ -5,10 +5,10 @@ const SelectCategory = ({ selectedCategory }) => {
     const { id, picture, title, category, category_bg_color, card_bg_color, text_color, price } = selectedCategory;
     return (
         <div>
-            <div className='rounded-lg flex flex-row h-fit ' style={{ background: card_bg_color }}>
-                <figure className=" w-1/3">
+            <div className='rounded-lg flex flex-col md:flex-row h-fit ' style={{ background: card_bg_color }}>
+                <figure className="w-full md:w-1/3">
                     <div className="relative w-full h-full">
-                        <img className=" rounded-l-lg h-full" src={picture} alt="thumbnail" />
+                        <img className="w-full rounded-l-lg h-full" src={picture} alt="thumbnail" />
                     </div>
                 </figure>
                 <div className="card-body flex flex-row  gap-3">

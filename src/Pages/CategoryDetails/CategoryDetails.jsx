@@ -28,7 +28,22 @@ const CategoryDetails = () => {
             if (!isExists) {
                 addedCategory.push(...selectedCategory, singleCategory);
                 localStorage.setItem('selected-category', JSON.stringify(addedCategory));
-                swal("Thank You!", "Your donation submitted successfully!", "success");
+                swal({
+                    title: "Thank You!",
+                    text: "Your donation submitted successfully!",
+                    icon: "success",
+                    buttons: {
+                        goHome: {
+                            text: "Go Home",
+                            value: "goHome",
+                        },
+                    },
+                })
+                    .then((value) => {
+                        if (value === "goHome") {
+                            window.location.href = "/";
+                        }
+                    });
             }
             else {
                 toast('Already donated')
